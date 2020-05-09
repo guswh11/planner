@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_menu_checklist"
+        android:icon="@drawable/ic_checklist"
+        android:title="CHECKLIST" />
+    <item
+        android:id="@+id/bottom_menu_memo"
+        android:icon="@drawable/ic_memo"
+        android:title="MEMO" />
+    <item
+        android:id="@+id/bottom_menu_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="SETTING" />
+</menu>
