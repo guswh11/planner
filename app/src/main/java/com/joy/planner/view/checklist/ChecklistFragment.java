@@ -9,30 +9,33 @@ import android.widget.DatePicker;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.joy.planner.R;
+import com.joy.planner.databinding.FragmentChecklistBinding;
 
 public class ChecklistFragment extends Fragment {
+    FragmentChecklistBinding binding;
+    MaterialDatePicker datePicker;
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_checklist, container, false);
-        Button button = view.findViewById(R.id.button);
+        binding = DataBindingUtil.inflate(
+                inflater, R.layout.fragment_checklist, container, false);
+        binding.setFragment(this);
+        View view = binding.getRoot();
 
         MaterialDatePicker.Builder builder = MaterialDatePicker.Builder.datePicker();
         builder.setTitleText("Select a date");
-        final MaterialDatePicker datePicker = builder.build();
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                datePicker.show(getActivity().getSupportFragmentManager(), "date_picker");
-            }
-        });
-
+        datePicker = builder.build();
 
         return view;
+    }
+
+    public void openDatePicker(View view){
+        datePicker.show(getActivity().getSupportFragmentManager(), "date_picker");
     }
 }
