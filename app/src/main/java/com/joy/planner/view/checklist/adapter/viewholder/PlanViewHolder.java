@@ -1,4 +1,4 @@
-package com.joy.planner.adapter.checklist;
+package com.joy.planner.view.checklist.adapter.viewholder;
 
 import android.view.View;
 
