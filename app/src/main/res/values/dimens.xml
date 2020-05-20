@@ -2,4 +2,7 @@
 <resources>
     <dimen name="bottom_nav_height">56dp</dimen>
     <dimen name="bottom_nav_icon">24dp</dimen>
+
+    <dimen name="list_item_height">56dp</dimen>
+    <dimen name="list_item_icon">24dp</dimen>
 </resources>
