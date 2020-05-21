@@ -8,8 +8,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.joy.planner.R;
+import com.joy.planner.view.checklist.PlanItemView;
 
-public class PlanViewHolder extends RecyclerView.ViewHolder{
+public class PlanViewHolder extends RecyclerView.ViewHolder implements PlanItemView {
     private TextView planTextView;
     private ImageButton statusImgBtn;
     private ImageButton dragImgBtn;
@@ -21,6 +22,7 @@ public class PlanViewHolder extends RecyclerView.ViewHolder{
         dragImgBtn = itemView.findViewById(R.id.img_btn_drag);
     }
 
+    @Override
     public void setPlan(String plan) {
         planTextView.setText(plan);
     }
