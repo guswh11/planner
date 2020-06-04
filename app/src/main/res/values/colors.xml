@@ -8,5 +8,5 @@
     <color name="colorSecondaryLight">#a7c0cd</color>
     <color name="colorSecondaryDark">#4b636e</color>
 
-    <color name="colorComplementary">#aa6882</color>
+    <color name="colorAccent">#aa6882</color>
 </resources>
