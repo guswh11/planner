@@ -1,6 +1,7 @@
 package com.joy.planner.view.checklist;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ public class ChecklistFragment extends Fragment {
     FragmentChecklistBinding binding;
     MaterialDatePicker datePicker;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(
@@ -37,5 +39,9 @@ public class ChecklistFragment extends Fragment {
 
     public void openDatePicker(View view){
         datePicker.show(getActivity().getSupportFragmentManager(), "date_picker");
+    }
+
+    public void openAddPlanFragmentDialog(View view) {
+
     }
 }
