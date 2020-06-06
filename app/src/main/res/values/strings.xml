@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">planner</string>
+
+    <!--common-->
+    <string name="save">저장</string>
+
+    <!--add plan-->
+    <string name="new_plan">일정</string>
 </resources>

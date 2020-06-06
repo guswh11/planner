@@ -10,23 +10,22 @@
         android:id="@+id/appbar"
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/default_elevation">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            android:layout_height="@dimen/app_bar_width"
+            android:layout_marginRight="@dimen/app_bar_margin"
+            app:itemIconTint="@android:color/black"
+            app:itemTextColor="@android:color/black"
+            app:menu="@menu/menu_add_plan_app_bar"
+            app:navigationIcon="@drawable/ic_close"
+            app:subtitleTextColor="@android:color/black"
+            app:title="@string/new_plan"
+            app:titleTextColor="@android:color/black" />
 
-            app:toolbarId="@+id/toolbar">
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:menu="@menu/menu_add_plan_app_bar"></androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView

@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="default_elevation">6dp</dimen>
+
     <dimen name="bottom_nav_height">56dp</dimen>
     <dimen name="bottom_nav_icon">24dp</dimen>
 
     <dimen name="list_item_height">56dp</dimen>
     <dimen name="list_item_icon">24dp</dimen>
+
+    <dimen name="app_bar_width">56dp</dimen>
+    <dimen name="app_bar_icon">24dp</dimen>
+    <dimen name="app_bar_margin">16dp</dimen>
+    <dimen name="app_bar_title_text">20dp</dimen>
+    <dimen name="app_bar_title_margin">20dp</dimen>
 </resources>
