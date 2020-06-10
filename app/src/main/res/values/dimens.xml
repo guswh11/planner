@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="default_elevation">6dp</dimen>
+    <dimen name="default_list_height">48dp</dimen>
+    <dimen name="default_padding_4">4dp</dimen>
+    <dimen name="default_padding_8">8dp</dimen>
 
     <dimen name="bottom_nav_height">56dp</dimen>
     <dimen name="bottom_nav_icon">24dp</dimen>
