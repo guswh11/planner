@@ -17,8 +17,8 @@ public class PlanViewHolder extends RecyclerView.ViewHolder implements PlanItemV
 
     public PlanViewHolder(@NonNull View itemView) {
         super(itemView);
-        planTextView = itemView.findViewById(R.id.text_view_plan);
-        statusImgBtn = itemView.findViewById(R.id.img_btn_status);
+        planTextView = itemView.findViewById(R.id.text_view_plan_name);
+        statusImgBtn = itemView.findViewById(R.id.img_btn_drag);
         dragImgBtn = itemView.findViewById(R.id.img_btn_drag);
     }
 
