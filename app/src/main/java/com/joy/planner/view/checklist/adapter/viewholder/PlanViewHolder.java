@@ -11,19 +11,28 @@ import com.joy.planner.R;
 import com.joy.planner.view.checklist.PlanItemView;
 
 public class PlanViewHolder extends RecyclerView.ViewHolder implements PlanItemView {
-    private TextView planTextView;
+    private TextView planNameTextView;
+    private TextView planContentTextView;
+
     private ImageButton statusImgBtn;
     private ImageButton dragImgBtn;
 
     public PlanViewHolder(@NonNull View itemView) {
         super(itemView);
-        planTextView = itemView.findViewById(R.id.text_view_plan_name);
+        planNameTextView = itemView.findViewById(R.id.text_view_plan_name);
+        planContentTextView = itemView.findViewById(R.id.text_view_plan_content);
+
         statusImgBtn = itemView.findViewById(R.id.img_btn_drag);
         dragImgBtn = itemView.findViewById(R.id.img_btn_drag);
     }
 
     @Override
-    public void setPlan(String plan) {
-        planTextView.setText(plan);
+    public void setPlanName(String planName) {
+        planNameTextView.setText(planName);
+    }
+
+    @Override
+    public void setPlanContent(String planContent) {
+        planContentTextView.setText(planContent);
     }
 }
