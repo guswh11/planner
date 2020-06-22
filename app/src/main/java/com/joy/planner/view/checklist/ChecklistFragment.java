@@ -18,7 +18,6 @@ import com.joy.planner.R;
 import com.joy.planner.databinding.FragmentChecklistBinding;
 import com.joy.planner.view.checklist.adapter.PlanRecyclerViewAdapter;
 import com.joy.planner.view.checklist.adapter.model.Plan;
-import com.joy.planner.view.checklist.presenter.PlanListPresenter;
 
 import java.util.ArrayList;
 
@@ -54,8 +53,7 @@ public class ChecklistFragment extends Fragment {
 
         binding.listViewPlan.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
-        PlanListPresenter presenter = new PlanListPresenter(planList);
-        PlanRecyclerViewAdapter adapter = new PlanRecyclerViewAdapter(presenter);
+        PlanRecyclerViewAdapter adapter = new PlanRecyclerViewAdapter(planList);
         binding.listViewPlan.setAdapter(adapter);
 
 

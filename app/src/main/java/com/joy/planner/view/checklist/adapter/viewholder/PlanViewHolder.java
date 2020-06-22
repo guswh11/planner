@@ -7,32 +7,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.joy.planner.BR;
 import com.joy.planner.R;
-import com.joy.planner.view.checklist.PlanItemView;
+import com.joy.planner.databinding.ItemPlanBinding;
+import com.joy.planner.view.checklist.adapter.model.Plan;
 
-public class PlanViewHolder extends RecyclerView.ViewHolder implements PlanItemView {
-    private TextView planNameTextView;
-    private TextView planContentTextView;
+public class PlanViewHolder extends RecyclerView.ViewHolder {
+    ItemPlanBinding binding;
 
-    private ImageButton statusImgBtn;
-    private ImageButton dragImgBtn;
-
-    public PlanViewHolder(@NonNull View itemView) {
-        super(itemView);
-        planNameTextView = itemView.findViewById(R.id.text_view_plan_name);
-        planContentTextView = itemView.findViewById(R.id.text_view_plan_content);
-
-        statusImgBtn = itemView.findViewById(R.id.img_btn_drag);
-        dragImgBtn = itemView.findViewById(R.id.img_btn_drag);
+    public PlanViewHolder(@NonNull ItemPlanBinding binding) {
+        super(binding.getRoot());
+        this.binding = binding;
     }
 
-    @Override
-    public void setPlanName(String planName) {
-        planNameTextView.setText(planName);
-    }
-
-    @Override
-    public void setPlanContent(String planContent) {
-        planContentTextView.setText(planContent);
+    public void bind(Plan plan){
+        binding.setVariable(BR.plan, plan);
     }
 }
